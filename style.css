@@ -160,9 +160,10 @@ h5{
 }
 
 .secondline{
-    width: 30%;
+    width: 34%;
     padding: 0.1rem;
     background-color: white;
+    border-radius: 10rem;
 }
 
 .second{
@@ -219,15 +220,84 @@ position: relative;
 .right .place-image{
     position: absolute;
     /* width: 100%; */
-    width: 30vw;
-    bottom: 22%;
+    width: 100%;    
+    bottom: -5%;
+
 }
 .right .place-image img{
-    width: 30vw;
-    background: var(--color-secondary-secondary);
-    border-radius: 313px 115px 20px 15px;
+    width: 50vw;
+    min-width: 31rem;
+    position: relative;
+    filter: drop-shadow(0px 0px 6px #000000);
+    right: 7rem;
+    /* background: var(--color-secondary-secondary);
+    border-radius: 313px 115px 20px 15px; */
+}
+.logo-js{
+    background: #222222;
+    font-size: 4vw;
+    position: absolute;
+    top: 1rem;
+    border-radius: 50%;
+    padding: 1rem;
+    filter: drop-shadow(3px 0px 4px #222222);
+    min-width: 55px;
+    width: 5vw;
+    left: 3rem;
+    
 }
 
+.logo-brackets{
+    background: #222222;
+    font-size: 4vw;
+    position: absolute;
+    border-radius: 50%;
+    padding: 1rem;
+    top: 4rem;
+    filter: drop-shadow(3px 0px 4px #222222);
+
+    right: 0rem;
+    min-width: 55px;
+    width: 5vw;
+}
+.logo-vue{
+    background: #222222;
+    font-size: 4vw;
+    position: absolute;
+    border-radius: 50%;
+    padding: 1rem;
+    bottom: 6rem;
+    filter: drop-shadow(3px 0px 4px #222222);
+
+    left: 0rem;
+    min-width: 55px;
+    width: 5vw;
+
+}
+
+.black-circle{
+    background: #28292d;
+    width: 35vw;
+    border-radius: 50%;
+    height: 35vw;
+    position: absolute;
+    left: -7rem;
+    bottom: 0rem;
+    min-width: 19rem;
+    min-height: 19rem;
+    z-index: -1;
+    max-height: 35rem;
+    max-width: 35rem;
+}
+
+/* content: '\ec18';
+    background: #282828;
+    font-size: 4vw;
+    position: absolute;
+    border-radius: 50%;
+    padding: 1rem;
+    bottom: 1rem;
+    left: -2rem; */
 .socials{
     width: fit-content;
     display: flex;
@@ -315,7 +385,8 @@ font-size: 1rem;
 
 /* Honours */
 .honors__container{
-    height: 100vh;
+    /* height: 100vh; */
+    height: fit-content;
 }
 .honors{
     background: var(--color-gray);
@@ -467,11 +538,11 @@ form input, textarea{
 /* TIll 790 good */
 
 @media screen and (max-width: 1px) {
-    .right .place-image {
+    /* .right .place-image {
         position: absolute;
         width: 30vw;
         bottom: 37%;
-    }
+    } */
 
 
 }
@@ -571,10 +642,7 @@ form {
 
 /* =================== MEDIA QUERIES MOBILES (600px) ===================*/
 @media screen and (max-width: 600px) {
-    .secondline{
-        display: none;
-    }
-    /* .right .place-image img{
+    /* .secondline{
         display: none;
     } */
     .about__container{
@@ -593,18 +661,93 @@ form {
         text-align: center;
         padding-top: 0;
     }
-    /* .profile-photo img {
-        width: 10rem;
-        border-radius: 50%;
-        border: var(--image-border);
-    } */
 h5{
     font-size: .9rem;
+}
+
+/* RIGHT */
+.right.rightbc {
+    align-items: center;
+    position: relative;
+    width: -10vw;
+    /* display: none; */
+    display: flex;
+    justify-content: center;
+}
+.black-circle {
+    background: #28292d;
+    width: 35vw;
+    border-radius: 50%;
+    height: 35vw;
+    position: absolute;
+    left: 0rem;
+    bottom: 0rem;
+    /* width: 100%; */
+    min-width: 19rem;
+    min-height: 19rem;
+    z-index: -1;
+    justify-content: center;
+}
+.right .place-image {
+    /* position: absolute; */
+    display: flex;
+    bottom: 0;
+    z-index: -3;
+    /* width: 90%; */
+    /* justify-content: center; */
+}
+.right .place-image img {
+    width: 50vw;
+    min-width: 31rem;
+    position: relative;
+    filter: drop-shadow(0px 0px 6px #000000);
+    right: 7rem;
+}
+.logo-js {
+    background: #222222;
+    font-size: 4vw;
+    position: absolute;
+    top: 1rem;
+    border-radius: 50%;
+    padding: 1rem;
+    filter: drop-shadow(3px 0px 4px #222222);
+    /* bottom: 1rem; */
+    min-width: 55px;
+    width: 5vw;
+    left: 3rem;
+}
+
+.logo-brackets {
+    background: #222222;
+    font-size: 4vw;
+    position: absolute;
+    border-radius: 50%;
+    padding: 1rem;
+    top: 4rem;
+    filter: drop-shadow(3px 0px 4px #222222);
+    /* width: 5rem; */
+    right: 0rem;
+    min-width: 55px;
+    width: 5vw;
+}
+.logo-vue {
+    background: #222222;
+    font-size: 4vw;
+    position: absolute;
+    border-radius: 50%;
+    padding: 1rem;
+    bottom: 6rem;
+    filter: drop-shadow(3px 0px 4px #222222);
+    /* width: 6rem; */
+    left: 0rem;
+    min-width: 55px;
+    width: 5vw;
 }
 .lists {
     padding-top: 2rem;
     display: none;
 }
+
 /* .honors__container h4 {
     display: none;
 } */
@@ -665,7 +808,7 @@ form {
     bottom: 0;
     height: 100vh;
 }
-.right .place-image img {
+/* .right .place-image img {
     width: 50vw;
     background: var(--color-secondary-secondary);
     border-radius: 50% 50% 0 0;
@@ -678,7 +821,7 @@ form {
     z-index: -3;
     width: 90vw;
     justify-content: center;
-}
+} */
 .profile-photo img {
     width: 10rem;
     border-radius: 50%;
@@ -694,6 +837,34 @@ form {
     position: inherit;
     align-items: center;
 }
-
-
+.second {
+    display: flex;
+    opacity: 50%;
+    position: absolute;
+    justify-content: center;
+    width: -webkit-fill-available;
+    padding: 2rem 0 0 0;
+}
+.maintitle {
+    font-size: 1.2rem;
+    padding: 2rem 0 0 0;
+}
+.honors__container h4 {
+    padding: 3rem 0rem;
+    font-size: 1rem;
+    text-align: center;
+}
+.contact__container p {
+    color: var(--color-white);
+    font-size: 0.8rem;
+}
+.contact__left h2 {
+    font-size: 1rem;
+    padding-bottom: 0.5rem;
+    padding-top: 1rem;
+}
+.form-area {
+    display: flex;
+    justify-content: center;
+}
 }
