@@ -17,10 +17,12 @@
     --color-yellow: #FFC807;
     --color-green: #2EFC36;
     --color-white: #ffff;
+    --color-black: #222222;
     --color-muted: rgba(255, 255, 255, 0.9);
     --color-primary: rgba(99, 167, 86, 0.9);
     --color-secondary: rgba(99, 167, 86, 30%);
     --color-danger: hsl(0, 95%, 65%);
+
 
 
     --color-dark:rgba(55, 55, 55, 1);
@@ -32,15 +34,6 @@
 
 
     --image-border: 3px solid rgba(87, 217, 164, 0.78);
-
-    /* --color-primary: #7562e0;
-    --color-primary-variant: rgba(102,0,255,0.2);
-    --color-white: #ffff;
-    --color-light: #f5f5f5;
-    --color-black: #0f0f1b;
-    --color-dark: #4b4a53;
-    --color-success: hsl(120, 95%, 65%);
-    --color-danger: hsl(0, 95%, 65%); */
 
     --container-width-lg: 82%;
     --container-width-md: 90%;
@@ -92,6 +85,8 @@ h5{
     width: 100%;
     object-fit: cover;
 }
+
+/* ======================================================    HOME PAGE     ==================================================== */
 .container{
     width: 90%;
     max-width: 1080px;
@@ -145,7 +140,7 @@ h5{
 
 .btn-primary{
     background: var(--color-primary);
-    color: var(--color-black);
+    color: var(--color-white);
 }
 
 .btn-primary:hover{
@@ -213,6 +208,11 @@ align-items: center;
 .button a{
     border-radius: 2rem;
 }
+
+
+
+
+/* ======================================================    RIGHT SIDE     ==================================================== */
 .right {
 align-items: center;
 position: relative;
@@ -235,13 +235,13 @@ position: relative;
     border-radius: 313px 115px 20px 15px; */
 }
 .logo-js{
-    background: #222222;
+    background: var(--color-black);
     font-size: 4vw;
     position: absolute;
     top: 1rem;
     border-radius: 50%;
     padding: 1rem;
-    filter: drop-shadow(3px 0px 4px #222222);
+    filter: drop-shadow(3px 0px 4px var(--color-black));
     min-width: 55px;
     width: 5vw;
     left: 3rem;
@@ -249,26 +249,26 @@ position: relative;
 }
 
 .logo-brackets{
-    background: #222222;
+    background: var(--color-black);
     font-size: 4vw;
     position: absolute;
     border-radius: 50%;
     padding: 1rem;
     top: 4rem;
-    filter: drop-shadow(3px 0px 4px #222222);
+    filter: drop-shadow(3px 0px 4px var(--color-black));
 
     right: 0rem;
     min-width: 55px;
     width: 5vw;
 }
 .logo-vue{
-    background: #222222;
+    background: var(--color-black);
     font-size: 4vw;
     position: absolute;
     border-radius: 50%;
     padding: 1rem;
     bottom: 6rem;
-    filter: drop-shadow(3px 0px 4px #222222);
+    filter: drop-shadow(3px 0px 4px var(--color-black));
 
     left: 0rem;
     min-width: 55px;
@@ -313,7 +313,7 @@ position: relative;
 
 
 .navbar{
-
+    z-index: 100;
     width: 100%;
     justify-content: center;
     display: flex;
@@ -336,7 +336,7 @@ position: relative;
 }
 
 
-/* ABOUT ME */
+/* ======================================================    ABOUT ME     ==================================================== */
 
 /* .about__container h2{
 font-size: 1rem;
@@ -383,8 +383,7 @@ font-size: 1rem;
 /* END ABOUT ME */
 
 
-
-/* Honours */
+/* ======================================================    HONOURS    ==================================================== */
 .honors__container{
     /* height: 100vh; */
     height: fit-content;
@@ -461,7 +460,7 @@ details summary {
 
 
 
-/* CONTACT */
+/* ======================================================    CONTACT     ==================================================== */
 #contact{
     height: 100vh;
 }
@@ -534,128 +533,129 @@ form input, textarea{
 
 
 
-/* =================== MEDIA QUERIES TABLETS (1024px) ===================*/
+
+/* ======================================================   MEDIA QUERIES MOBILES (600px)     ==================================================== */
 
 
-/* 705 Just Image Change */
-
-/* TIll 790 good */
-
-@media screen and (max-width: 1px) {
-    /* .right .place-image {
-        position: absolute;
-        width: 30vw;
-        bottom: 37%;
-    } */
-
-
-}
-
-@media screen and (max-width: 1px) {
-
-.about__container {
-        padding-top: 2rem;
-        width: 92%;
-    }
- h5 {
-        font-size: 0.8rem;
-    }
-.container{
-    width: var(--container-width-sm);
-}
-
-.right .place-image {
-    position: absolute;
-    width: 30vw;
-    bottom: 38%;
-}
-.list-text {
-    font-size: .9rem;
-}
-.about__content {
-    display: grid;
-    width: fit-content;
-    padding-bottom: 5rem;
-    display: flex;
-    flex-direction: column-reverse;
-}
-.about__container {
-    padding-top: 2rem;
-    width: inherit;
-    text-align: center;
-}
-
-.profile-photo {
-    position: relative;
-    bottom: 3rem;
-}
-.profile-photo img {
-    width: 9rem;
-    border-radius: 50%;
-    border: var(--image-border);
-}
-    
-
-/* Skills */
-.certificates {
-        display: flex;
-        grid-template-columns: 50% 50%;
-        flex-direction: column;
-}
-
-/* Contact */
-.contact-information{
-    display: flex;
-    flex-direction: column;
-}
-.contact__left {
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding-top: 4rem;
-    margin-left: 0;
-}
-.form-area{
-    display: flex;
-    justify-content: center;
-}
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    margin-top: -2rem;
-    width: inherit;
-}
-    .project__body {
-        margin-top: 2rem;
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        gap: 2rem;
-        width: 100%;
-    }
-    .contact__container p {
-        color: var(--color-white);
-        width: 80vw;
-    }
-
-
-}
-
-
-
-/* =================== MEDIA QUERIES MOBILES (600px) ===================*/
 @media screen and (max-width: 600px) {
-    /* .secondline{
-        display: none;
-    } */
+
+
+    /* ======================   BASIC     ====================== */
+    .maintitle {
+        font-size: 1.2rem;
+        padding: 2rem 0 0 0;
+    }
+    h5{
+        font-size: .9rem;
+    }
+    .second {
+        display: flex;
+        opacity: 50%;
+        position: absolute;
+        justify-content: center;
+        width: -webkit-fill-available;
+        padding: 2rem 0 0 0;
+    }
+
+
+        /* ======================   HOME     ====================== */
+        .right.rightbc {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            width: 90vw;
+            /* padding-top: 4rem; */
+        }
+        .home__container {
+            display: flex;
+            flex-direction: column;
+            height: auto;
+            min-height: 100vh;
+            justify-content: space-between;
+            padding: 1rem 0 0 0;
+        }
+        
+        .left-bar {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        .black-circle {
+            background: #28292d;
+            width: 35vw;
+            border-radius: 50%;
+            height: 35vw;
+            position: relative;
+            left: auto;
+            bottom: 0rem;
+            min-width: 19rem;
+            min-height: 19rem;
+            z-index: -1;
+            justify-content: center;
+        }
+        .right .place-image {
+            /* position: absolute; */
+            display: flex;
+            bottom: 0;
+            z-index: -3;
+            overflow: hidden;
+            /* width: 90%; */
+            /* justify-content: center; */
+        }
+        .right .place-image img {
+            width: 50vw;
+            min-width: 31rem;
+            position: relative;
+            filter: drop-shadow(0px 0px 6px #000000);
+            right: 7rem;
+        }
+        .logo-js {
+            background: var(--color-black);
+            font-size: 4vw;
+            position: absolute;
+            top: 1rem;
+            border-radius: 50%;
+            padding: 1rem;
+            filter: drop-shadow(3px 0px 4px var(--color-black));
+            /* bottom: 1rem; */
+            min-width: 55px;
+            width: 5vw;
+            left: 3rem;
+        }
+        
+        .logo-brackets {
+            background: var(--color-black);
+            font-size: 4vw;
+            position: absolute;
+            border-radius: 50%;
+            padding: 1rem;
+            top: 4rem;
+            filter: drop-shadow(3px 0px 4px var(--color-black));
+            /* width: 5rem; */
+            right: 0rem;
+            min-width: 55px;
+            width: 5vw;
+        }
+        .logo-vue {
+            background: var(--color-black);
+            font-size: 4vw;
+            position: absolute;
+            border-radius: 50%;
+            padding: 1rem;
+            bottom: 6rem;
+            filter: drop-shadow(3px 0px 4px var(--color-black));
+            /* width: 6rem; */
+            left: 0rem;
+            min-width: 55px;
+            width: 5vw;
+        }
+
+
+            /* ======================   ABOUT     ====================== */
     .about__container{
         height: fit-content;
     }
-    .maintitle{
-        font-size: 1.2rem;
-        padding-bottom: 3rem;
-    }
+
     .about__container,.honors__container,.contact__container{
         padding-top: 2rem;
     }
@@ -665,87 +665,8 @@ form {
         text-align: center;
         padding-top: 0;
     }
-h5{
-    font-size: .9rem;
-}
-
-/* RIGHT */
-.right.rightbc {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    width: 90vw;
-}
-.black-circle {
-    background: #28292d;
-    width: 35vw;
-    border-radius: 50%;
-    height: 35vw;
-    position: absolute;
-    left: auto;
-    bottom: 0rem;
-    min-width: 19rem;
-    min-height: 19rem;
-    z-index: -1;
-    justify-content: center;
-}
-.right .place-image {
-    /* position: absolute; */
-    display: flex;
-    bottom: 0;
-    z-index: -3;
-    overflow: hidden;
-    /* width: 90%; */
-    /* justify-content: center; */
-}
-.right .place-image img {
-    width: 50vw;
-    min-width: 31rem;
-    position: relative;
-    filter: drop-shadow(0px 0px 6px #000000);
-    right: 7rem;
-}
-.logo-js {
-    background: #222222;
-    font-size: 4vw;
-    position: absolute;
-    top: 1rem;
-    border-radius: 50%;
-    padding: 1rem;
-    filter: drop-shadow(3px 0px 4px #222222);
-    /* bottom: 1rem; */
-    min-width: 55px;
-    width: 5vw;
-    left: 3rem;
-}
-
-.logo-brackets {
-    background: #222222;
-    font-size: 4vw;
-    position: absolute;
-    border-radius: 50%;
-    padding: 1rem;
-    top: 4rem;
-    filter: drop-shadow(3px 0px 4px #222222);
-    /* width: 5rem; */
-    right: 0rem;
-    min-width: 55px;
-    width: 5vw;
-}
-.logo-vue {
-    background: #222222;
-    font-size: 4vw;
-    position: absolute;
-    border-radius: 50%;
-    padding: 1rem;
-    bottom: 6rem;
-    filter: drop-shadow(3px 0px 4px #222222);
-    /* width: 6rem; */
-    left: 0rem;
-    min-width: 55px;
-    width: 5vw;
-}
-.list {
+    
+    .list {
     display: flex;
     flex-direction: row;
     gap: 2rem;
@@ -755,19 +676,44 @@ h5{
     border-radius: 2rem;
     border: 1px solid rgb(87 217 164);
 }
-/* .honors__container h4 {
-    display: none;
-} */
+
+
+
+
+/* =========================    ABOUT ME     =========================*/
+
+.profile-photo img {
+    width: 10rem;
+    border-radius: 50%;
+    border: var(--image-border);
+}
+.maintitle {
+    font-size: 1.2rem;
+    padding-bottom: 0rem;
+
+
+}
+
+/* ======================   HONOURS     ====================== */
 .honors {
     background: var(--color-gray);
     padding: 1rem;
     border-radius: 2rem;
 }
+.honors__container h4 {
+    padding: 3rem 0rem;
+    font-size: 1rem;
+    text-align: center;
+}
+    /* ======================   CERTIFICATES     ====================== */
 .certificates {
     display: flex;
     flex-direction: column;
 }
 
+
+
+    /* ======================   CONTACT INFORMATION     ====================== */
 .contact-information {
     font-size: 0.9rem;
     background: var(--color-gray);
@@ -803,64 +749,12 @@ form {
     align-items: center;
 }
 
-
-
-
-/* New */
-
-.home__container {
-    display: grid;
-    grid-template-columns: 10% 90%;
-    padding: 1rem 0 0 0;
-    bottom: 0;
-    height: 100vh;
-}
-/* .right .place-image img {
-    width: 50vw;
-    background: var(--color-secondary-secondary);
-    border-radius: 50% 50% 0 0;
- 
-}
-.right .place-image {
-    position: absolute;
-    display: flex;
-    bottom: 0;
-    z-index: -3;
-    width: 90vw;
-    justify-content: center;
-} */
-.profile-photo img {
-    width: 10rem;
-    border-radius: 50%;
-    border: var(--image-border);
-}
-.maintitle {
-    font-size: 1.2rem;
-    padding-bottom: 0rem;
-
-
-}
 .contact-information {
     position: inherit;
     align-items: center;
 }
-.second {
-    display: flex;
-    opacity: 50%;
-    position: absolute;
-    justify-content: center;
-    width: -webkit-fill-available;
-    padding: 2rem 0 0 0;
-}
-.maintitle {
-    font-size: 1.2rem;
-    padding: 2rem 0 0 0;
-}
-.honors__container h4 {
-    padding: 3rem 0rem;
-    font-size: 1rem;
-    text-align: center;
-}
+
+
 .contact__container p {
     color: var(--color-white);
     font-size: 0.8rem;
@@ -874,4 +768,11 @@ form {
     display: flex;
     justify-content: center;
 }
+
+
+
+
+/* DONT FORGOT TO PUT IT ON TOP */
+
+
 }
